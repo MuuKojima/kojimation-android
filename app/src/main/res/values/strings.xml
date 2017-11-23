@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">kojimation</string>
+    <string name="common_request_error">通信エラーが発生しました。</string>
 </resources>
