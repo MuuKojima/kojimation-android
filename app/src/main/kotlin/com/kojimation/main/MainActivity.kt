@@ -1,7 +1,8 @@
-package com.kojimation
+package com.kojimation.main
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.kojimation.R
 import com.kojimation.ext.toast
 
 class MainActivity : AppCompatActivity() {
