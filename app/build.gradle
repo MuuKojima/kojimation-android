@@ -52,6 +52,14 @@ dependencies {
     implementation "com.android.support:support-v4:${supportLibraries}"
     implementation "com.android.support:design:${supportLibraries}"
 
+    // architecture components
+    def archVersion = '1.0.0'
+    def archRuntimeVersion = '1.0.3'
+    implementation "android.arch.lifecycle:runtime:$archRuntimeVersion"
+    implementation "android.arch.lifecycle:extensions:$archVersion"
+    implementation "android.arch.lifecycle:reactivestreams:$archVersion"
+    kapt "android.arch.lifecycle:compiler:$archVersion"
+
     // di
     def daggerVersion = '2.11'
     implementation "com.google.dagger:dagger:$daggerVersion"
@@ -61,17 +69,17 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // network
-    def okhttp_version = '3.9.0'
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    def okhttpVersion = '3.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     def retrofitVersion = '2.3.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
 
     // json parser
-    def moshi_version = '1.5.0'
-    implementation "com.squareup.moshi:moshi:$moshi_version"
-    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    def moshiVersion = '1.5.0'
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
 
     // reactive
     implementation "io.reactivex.rxjava2:rxkotlin:2.1.0"
