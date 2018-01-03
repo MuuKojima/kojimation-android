@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        toast(R.string.common_request_error)
         load()
     }
 
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 .doAfterTerminate {
                 }
                 .subscribe({
-                    Timber.d("通信" + it)
+                    toast(R.string.common_request_success)
                 }, {
                     toast(R.string.common_request_error)
                 })

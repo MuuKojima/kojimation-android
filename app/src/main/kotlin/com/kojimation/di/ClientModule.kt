@@ -31,7 +31,7 @@ class ClientModule {
   @Provides
   @Singleton
   fun provideRetrofit(oktHttpClient: OkHttpClient, moshi: Moshi): Retrofit = Retrofit.Builder()
-      .baseUrl("http://www.kojimaiton-philosophy.com")
+      .baseUrl("https://kojimation.com")
       .client(oktHttpClient)
       .addConverterFactory(MoshiConverterFactory.create(moshi))
       .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
