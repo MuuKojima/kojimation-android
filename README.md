@@ -19,3 +19,7 @@ $ . import.sh
 Restart Android Studio
 Preferences -> Code Style -> Scheme -> set "KojimationStyle"
 ```
+
+## Copyright
+
+KOJIMATION All rights reserved.
