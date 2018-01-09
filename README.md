@@ -13,9 +13,9 @@ Open `kojimation-android` in your android studio then `Run`
 ## Installation
 
 ```
-$ git clone git@github.com:MuuKojima/kojimation-android.git`
-$ cd kojimation-android/idea/`
-$ . import.sh`
+$ git clone git@github.com:MuuKojima/kojimation-android.git
+$ cd kojimation-android/idea/
+$ . import.sh
 Restart Android Studio
 Preferences -> Code Style -> Scheme -> set "R25Style"
 ```
