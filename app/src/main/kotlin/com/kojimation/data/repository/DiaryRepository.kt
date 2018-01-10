@@ -10,8 +10,7 @@ class DiaryRepository @Inject constructor(
     private val diaryApi: DiaryApi
 ) {
 
-  fun getDiaries(offset: Int): Single<Diaries> =
-      diaryApi.getDiaries(LIMIT, offset).subscribeOn(Schedulers.io())
+  fun getDiaries(offset: Int) = diaryApi.getDiaries(LIMIT, offset)
 
   companion object {
     private val LIMIT = 20

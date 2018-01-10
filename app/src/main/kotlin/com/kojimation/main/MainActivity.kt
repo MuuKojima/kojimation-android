@@ -1,46 +1,33 @@
 package com.kojimation.main
 
+import android.arch.lifecycle.ViewModelProvider
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import com.kojimation.R
-import com.kojimation.data.repository.DiaryRepository
+import com.kojimation.ext.observe
 import com.kojimation.ext.toast
-import dagger.android.AndroidInjection
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 import timber.log.Timber
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
-    @Inject
-    lateinit var diaryRepository: DiaryRepository
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject lateinit var androidInjector: DispatchingAndroidInjector<Fragment>
+    private lateinit var viewModel: MainViewModel
 
-    private val disposables = CompositeDisposable()
-    private var offset = 0
+    override fun supportFragmentInjector() = androidInjector
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        load()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        disposables.clear()
-    }
-
-    private fun load() {
-        diaryRepository.getDiaries(offset)
-                .observeOn(AndroidSchedulers.mainThread())
-                .doAfterTerminate {
-                }
-                .subscribe({
-                    toast(R.string.common_request_success)
-                }, {
-                    toast(R.string.common_request_error)
-                })
-                .addTo(disposables)
+        setContentView(R.layout.main_activity)
+        viewModel = ViewModelProviders.of(this!!, viewModelFactory).get(MainViewModel::class.java)
+        viewModel.diaries.observe(this) {
+            Timber.d("KOJIMATION -> " + it.toString())
+            toast(R.string.common_request_success)
+        }
     }
 }

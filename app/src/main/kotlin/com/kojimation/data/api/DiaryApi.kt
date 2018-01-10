@@ -2,6 +2,7 @@ package com.kojimation.data.api
 
 import io.reactivex.Single
 import com.kojimation.data.model.Diaries
+import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -10,5 +11,5 @@ interface DiaryApi {
   fun getDiaries(
       @Query("limit") limit: Int,
       @Query("offset") offset: Int
-  ): Single<Diaries>
+  ): Flowable<Diaries>
 }
