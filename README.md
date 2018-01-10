@@ -17,5 +17,5 @@ $ git clone git@github.com:MuuKojima/kojimation-android.git
 $ cd kojimation-android/idea/
 $ . import.sh
 Restart Android Studio
-Preferences -> Code Style -> Scheme -> set "R25Style"
+Preferences -> Code Style -> Scheme -> set "KojimationStyle"
 ```
