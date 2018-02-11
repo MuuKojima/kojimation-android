@@ -23,3 +23,8 @@ Preferences -> Code Style -> Scheme -> set "KojimationStyle"
 ## Copyright
 
 KOJIMATION All rights reserved.
+
+
+## LICENSE
+
+MIT LICENSE [LICENSE](LICENSE)
