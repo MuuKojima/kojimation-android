@@ -20,6 +20,11 @@ Restart Android Studio
 Preferences -> Code Style -> Scheme -> set "KojimationStyle"
 ```
 
+## Contributors
+
+|[<img src="https://avatars2.githubusercontent.com/u/3895795?s= 130&v=4" width="130px;"/><br />MuuKojima](https://github.com/MuuKojima)<br /> 🤔💻🎨| 
+| :---: 
+
 ## Copyright
 
 KOJIMATION All rights reserved.
