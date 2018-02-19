@@ -20,6 +20,10 @@ Restart Android Studio
 Preferences -> Code Style -> Scheme -> set "KojimationStyle"
 ```
 
+## Changelog
+
+Detailed changes for each release are documented in the [release notes](https://github.com/MuuKojima/kojimation-android/releases).
+
 ## Contributors
 
 |[<img src="https://avatars2.githubusercontent.com/u/3895795?s= 130&v=4" width="130px;"/><br />MuuKojima](https://github.com/MuuKojima)<br /> 🤔💻🎨| 
