@@ -1,6 +1,6 @@
 # kojimation-android
 
-<img src="https://user-images.githubusercontent.com/3895795/34653386-67041a0a-f42e-11e7-91c0-8873f4450446.png" width="150px">
+<img src="./art/logo.png" width="150px">
 
 ## Requirement
 
